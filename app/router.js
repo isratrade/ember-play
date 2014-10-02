@@ -6,6 +6,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.resource('hostgroups', function() {
+    this.resource('hostgroup', { path: '/:hostgroup_id' });
+  });
 });
 
 export default Router;

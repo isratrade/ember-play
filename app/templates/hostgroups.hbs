@@ -1,1 +1,15 @@
+List of Hostgroups
+
+<ul>
+  {{#each}}
+    <li>
+      {{#link-to 'hostgroup' this}}
+        {{name}}
+      {{/link-to}}
+    </li>
+  {{else}}
+    <li>No hostgroups found.</li>
+  {{/each}}
+</ul>
+
 {{outlet}}

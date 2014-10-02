@@ -1,5 +1,7 @@
 <h2>List of Hostgroups</h2>
 
+<div class='row'>
+  <div class='col-md-3'>
 <ul>
   {{#each}}
     <li>
@@ -11,5 +13,8 @@
     <li>No hostgroups found.</li>
   {{/each}}
 </ul>
-
-{{outlet}}
+  </div>
+  <div class='col-md-3'>
+    {{outlet}}
+  </div>
+</div>

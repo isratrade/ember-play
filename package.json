@@ -29,6 +29,7 @@
     "express": "^4.8.5",
     "glob": "^4.0.5",
     "ember-cli-bootstrap-sass": "^0.1.63",
-    "ember-cli-sass": "^1.0.2"
+    "ember-cli-sass": "^1.0.2",
+    "broccoli-sass": "^0.2.2"
   }
 }

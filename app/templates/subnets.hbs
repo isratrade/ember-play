@@ -1,20 +1,20 @@
 <h2>List of Subnets</h2>
 
-<div class='row'>
-  <div class='col-md-3'>
-<ul>
+<button class="btn btn-large btn-primary new" {{action 'goToNewSubnet'}}>New subnet</button>
+<table class="table table-striped">
+  <tbody>
+  <tr>
+    <th>Name</th>
+    <th>Actions</th>
+  </tr>
   {{#each}}
-    <li>
-      {{!#link-to 'subnet' this}}
-        {{name}}
-      {{!/link-to}}
-    </li>
-  {{else}}
-    <li>No subnets found.</li>
+    <tr>
+      <td> {{#link-to 'subnet' this}}{{name}}{{/link-to}}</td>
+      <td>
+        <span class="edit glyphicon glyphicon-edit" {{#link-to 'subnet.edit' this}}{{/link-to}}></span>
+        <span class="remove glyphicon glyphicon-remove-circle" {{action 'remove' this}}></span>
+      </td>
+    </tr>
   {{/each}}
-</ul>
-  </div>
-  <div class='col-md-6'>
-    {{outlet}}
-  </div>
-</div>
+  </tbody>
+</table>

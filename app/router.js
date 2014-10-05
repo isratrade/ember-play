@@ -14,7 +14,15 @@ Router.map(function() {
     this.resource('hostgroup', { path: '/:hostgroup_id' });
   });
   this.route('domains');
-  this.route('subnets');
+
+  this.resource('subnets',     {path:'/subnets' });
+  // form to allow you upload new subnet
+  this.resource('subnet.new',  {path:'/subnet/new'});
+  // view an existing subnet
+  this.resource('subnet',      {path:'/subnet/:subnet_id'}, function(){
+    // edit an existing subnet
+    this.route('edit');
+  });
 });
 
 export default Router;

@@ -1,11 +1,15 @@
 <h2>Hostgroup</h2>
 
 <div class='row'>
+
   <div class='col-md-6'>
     Name: {{name}}
     <br />
     Subnet: {{subnet.name}}
+    <br />
+    Domain: {{domain.name}}
   </div>
+
   <div class='col-md-6'>
     {{view Ember.TextField valueBinding='name'}}
     <br />
@@ -17,6 +21,16 @@
            selection=subnet
            value=subnet.id
            prompt="Select Subnet"
+      }}
+    </p>
+    <p>Domain:
+      {{view Ember.Select
+           content=domains
+           optionLabelPath="content.name"
+           optionValuePath="content.id"
+           selection=domain
+           value=domain.id
+           prompt="Select Domain"
       }}
     </p>
 

@@ -9,6 +9,8 @@ Router.map(function() {
   this.resource('hostgroups', function() {
     this.resource('hostgroup', { path: '/:hostgroup_id' });
   });
+  this.route('domains');
+  this.route('subnets');
 });
 
 export default Router;

@@ -9,9 +9,9 @@
   </tr>
   {{#each}}
     <tr>
-      <td> {{#link-to 'subnet' this}}{{name}}{{/link-to}}</td>
+      <td> {{#link-to 'subnet' this}}{{name}}{{/link-to}} </td>
       <td>
-        <span class="edit glyphicon glyphicon-edit" {{#link-to 'subnet.edit' this}}{{/link-to}}></span>
+        {{#link-to 'subnet.edit' this}}<span class="edit glyphicon glyphicon-edit"></span>{{/link-to}}
         <span class="remove glyphicon glyphicon-remove-circle" {{action 'remove' this}}></span>
       </td>
     </tr>

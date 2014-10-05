@@ -1,13 +1,7 @@
-<div class="container">
-  <div class="row preview">
-    <div class="col-md-4">
-    </div>
-    <div class="col-md-8">
-      <h2>{{name}}</h2>
-      <p>{{description}}</p>
-    </div>
-  </div>
-  <div class="row">
-    {{outlet}}
-  </div>
-</div>
+INDIVIDUAL SUBNET
+<h2>{{name}}</h2>
+
+{{#link-to 'subnet.edit' this}}<span class="edit glyphicon glyphicon-edit"></span>{{/link-to}}
+
+<hr />
+{{outlet}}

@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
-  needs: [ 'subnet' ],
+//  needs: [ 'subnet' ],
   abc: 'abcddddd'
 });

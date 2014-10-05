@@ -1,20 +1,42 @@
 <h2>List of Subnets</h2>
 
-<button class="btn btn-large btn-primary new" {{action 'goToNewSubnet'}}>New subnet</button>
-<table class="table table-striped">
-  <tbody>
-  <tr>
-    <th>Name</th>
-    <th>Actions</th>
-  </tr>
-  {{#each}}
-    <tr>
-      <td> {{#link-to 'subnet' this}}{{name}}{{/link-to}} </td>
-      <td>
-        {{#link-to 'subnet.edit' this}}<span class="edit glyphicon glyphicon-edit"></span>{{/link-to}}
-        <span class="remove glyphicon glyphicon-remove-circle" {{action 'remove' this}}></span>
-      </td>
-    </tr>
-  {{/each}}
-  </tbody>
-</table>
+twopange - {{twopane}}
+<br />
+hidetable - {{hidetable}}
+<br />
+controllers.subnet.hidetable - {{controllers.subnet.hidetable}}
+<br />
+yyyyy - {{yyyyy}}
+<div class='row'>
+  {{!#if (controllers.subnet.hidetable == 'eeee')}}
+  <div class='col-md-6'>
+
+    <button class="btn btn-large btn-primary new" {{action 'goToNewSubnet'}}>New subnet</button>
+    <table class="table table-striped">
+      <tbody>
+      <tr>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+      {{#each}}
+        <tr>
+          <td> {{#link-to 'subnet' this}}{{name}}{{/link-to}} </td>
+          <td>
+            {{#link-to 'single-subnet' this}}View on Page{{/link-to}}
+            {{#link-to 'subnet.edit' this}}<span class="edit glyphicon glyphicon-edit"></span>{{/link-to}}
+            <span class="remove glyphicon glyphicon-remove-circle" {{action 'remove' this}}></span>
+          </td>
+        </tr>
+      {{/each}}
+      </tbody>
+    </table>
+
+  </div>
+  {{!/if}}
+
+  <div class='col-md-6'>
+
+    {{outlet}}
+
+  </div>
+</div>

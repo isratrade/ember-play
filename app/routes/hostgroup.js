@@ -19,4 +19,3 @@ export default Ember.Route.extend({
     console.log('left hostgroup route');
   }
 });
-

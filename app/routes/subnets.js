@@ -5,6 +5,17 @@ export default Ember.Route.extend({
     return this.store.find('subnet');
   },
 
+  setupController: function(controller, model) {
+    controller.set('model', model);
+    controller.set('twopane', true);
+    controller.set('hidetable', 'abc');
+    //this.controllerFor('subnet').set('hidetable', 'xyzzzzz');
+  },
+  activate:   function() {
+    //this.controllerFor('hostgroup').set('showColumns', false)
+    console.log('entering subnets route');
+  },
+
   actions: {
     goToNewSubnet: function () {
       this.transitionTo( 'subnet.new' );

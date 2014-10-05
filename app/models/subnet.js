@@ -14,6 +14,6 @@ export default DS.Model.extend({
   to: DS.attr('string'),
   created_at: DS.attr('date'),
   updated_at: DS.attr('date'),
-  tags: DS.hasMany('hostgroup')
+  hostgroups: DS.hasMany('hostgroup')
 
 });

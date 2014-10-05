@@ -13,13 +13,13 @@ export default Ember.Route.extend({
 
   activate:   function() {
     //this.controllerFor('hostgroup').set('showColumns', false)
-    console.log('entering SUBNET route');
+    console.log('ENTERING SUBNET SINGLE route');
     this.controllerFor('subnet').set('hidetable', 'eeee');
   },
 
   deactivate:   function() {
     this.controllerFor('subnet').set('hidetable', 'fffff')
-    console.log('EXISTING SUBNET route');
+    console.log('EXISTING SUBNET SINGLE route');
   },
 
 });

@@ -13,7 +13,11 @@ export default Ember.Route.extend({
   },
   activate:   function() {
     //this.controllerFor('hostgroup').set('showColumns', false)
-    console.log('entering subnets route');
+    console.log('ENTERING SUBNETS INDEX route');
+  },
+  deactivate:   function() {
+    //this.controllerFor('hostgroup').set('showColumns', false)
+    console.log('EXITING SUBNETS INDEX route');
   },
 
   actions: {

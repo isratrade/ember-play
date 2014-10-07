@@ -28,6 +28,7 @@ Router.map(function() {
     this.route('edit');
   });
   this.resource('subreddit', {path: '/r/:subreddit_id'});
+  this.resource('todos');
 });
 
 export default Router;

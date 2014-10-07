@@ -27,6 +27,7 @@ Router.map(function() {
     // edit an existing subnet
     this.route('edit');
   });
+  this.resource('subreddit', {path: '/r/:subreddit_id'});
 });
 
 export default Router;

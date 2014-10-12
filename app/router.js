@@ -34,6 +34,11 @@ Router.map(function() {
       this.route('completed');
   });
 
+  this.route('popular-now');
+  this.resource('releases', {path: '/:owner/:repo/releases'}, function() {
+    this.route('show', {path: '/:release_id'});
+  });
+  this.route('releases/show');
 });
 
 export default Router;

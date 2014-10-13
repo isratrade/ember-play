@@ -1,4 +1,4 @@
-<h1>List of Users ({{cntUsers}})</h1>
+<h1>List of Users ({{cntFilteredUsers}} of {{cntAllUsers}})</h1>
 
 {{#each error in errors.email}}
   {{error.message}}
@@ -7,6 +7,8 @@
 <div class='row'>
 
   <div class='col-md-6'>
+
+    {{view Ember.TextField value=search placeholder="search" classNames="search"}}
 
     {{#link-to 'users.new'}}New Lead{{/link-to}}
 
@@ -18,7 +20,8 @@
         <th>Email</th>
         <th>Actions</th>
       </tr>
-      {{#each user in controller}}
+
+      {{#each user in filteredUsers}}
         <tr>
           <td> {{#link-to 'user' user}} {{user.login}} {{/link-to}} </td>
           <td> {{user.fullName}} </td>

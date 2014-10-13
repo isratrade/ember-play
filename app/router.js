@@ -44,7 +44,7 @@ Router.map(function() {
 
   this.resource('users', { path: '/users' }, function() {
     this.route('new');
-    this.resource('user', { path: 'users/:id' }, function() {
+    this.resource('user', { path: '/:id' }, function() {
       this.route('edit');
     });
   });

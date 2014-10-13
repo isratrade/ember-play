@@ -1,0 +1,26 @@
+    Name {{view Ember.TextField value=content.name}}
+
+    <br />
+    <p>Subnet:
+      {{view Ember.Select
+           content=subnets
+           optionLabelPath="content.name"
+           optionValuePath="content.id"
+           selection=content.subnet
+           value=content.ubnet.id
+           prompt="Select Subnet"
+      }}
+    </p>
+    <p>Domain:
+      {{view Ember.Select
+           content=domains
+           optionLabelPath="content.name"
+           optionValuePath="content.id"
+           selection=content.domain
+           value=content.domain.id
+           prompt="Select Domain"
+      }}
+    </p>
+
+
+<button {{action 'update'}}>Save Changes</button>

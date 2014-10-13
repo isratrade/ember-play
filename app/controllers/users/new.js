@@ -5,16 +5,16 @@ export default Ember.Controller.extend({
     createUser: function() {
 
       var self = this;
-      var fields = this.get('fields')
+      var fields = this.get('fields');
 
       // if (self.valid(fields)) {
-        var user = this.store.createRecord('user', fields)
+        var user = this.store.createRecord('user', fields);
 
         user.save().then(function(user) {
-          self.transitionToRoute('user', user)
+          self.transitionToRoute('user', user);
         }, function(response) {
-          console.error("User not saved!");
-          this.set('showError', true);
+          console.log("User not saved!");
+          alert(response);
         });
       // } else {
       //   console.log('error got here');

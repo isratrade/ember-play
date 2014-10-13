@@ -11,7 +11,9 @@ export default Ember.ObjectController.extend({
         this.get('model').save().then(function() {
           self.transitionToRoute('user');
         }, function(response) {
-          console.log("User not saved!");
+          console.log("User not saved!" + response);
+          //alert('error with saving buddy');
+          alert(response);
         });
       }
     },

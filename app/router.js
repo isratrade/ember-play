@@ -11,7 +11,9 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.resource('hostgroups', function() {
-    this.resource('hostgroup', { path: '/:hostgroup_id' });
+    this.resource('hostgroup', { path: '/:hostgroup_id' }, function() {
+      this.route('edit');
+    });
   });
   this.route('domains');
   this.resource('subnets', function() {

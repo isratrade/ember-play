@@ -9,5 +9,5 @@ export default DS.Model.extend({
   lastLoginOn: DS.attr('date'),
   fullName: function() {
     return this.get('firstname') + ' ' + this.get('lastname');
-  }.property('firstname', 'firstname')
+  }.property('firstname', 'lastname')
 });

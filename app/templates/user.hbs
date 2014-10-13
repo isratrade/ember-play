@@ -24,3 +24,9 @@ login {{view Ember.TextField value=model.login}}
 <br />
 <br />
 <button {{action 'saveChanges'}}>Save Changes</button>
+{{#if controller.showUnsavedMessage}}
+     <div class=unsaved> unsaved changes</div>
+{{/if}}
+{{#if controller.model.isSaving}}
+    <div class=saving> saving...</div>
+{{/if}}

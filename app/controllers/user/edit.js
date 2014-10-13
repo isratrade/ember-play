@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
+export default Ember.ObjectController.extend({
+
+  showError: false,
 
   actions: {
     saveChanges: function() {
@@ -8,6 +10,8 @@ export default Ember.Controller.extend({
       if (this.get('model.isDirty')) {
         this.get('model').save().then(function() {
           self.transitionToRoute('user');
+        }, function(response) {
+          console.log("User not saved!");
         });
       }
     },

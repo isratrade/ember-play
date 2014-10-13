@@ -47,8 +47,6 @@ Router.map(function() {
     });
   });
 
-  this.route('user/edit');
-  this.route('users/new');
 });
 
 export default Router;

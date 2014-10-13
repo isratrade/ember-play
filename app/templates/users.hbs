@@ -1,3 +1,9 @@
+<h1>List of Users ({{cntUsers}})</h1>
+
+{{#each error in errors.email}}
+  {{error.message}}
+{{/each}}
+
 <div class='row'>
 
   <div class='col-md-6'>
@@ -9,12 +15,14 @@
       <tr>
         <th>Login</th>
         <th>Name</th>
+        <th>Email</th>
         <th>Actions</th>
       </tr>
       {{#each user in controller}}
         <tr>
           <td> {{#link-to 'user' user}} {{user.login}} {{/link-to}} </td>
           <td> {{user.fullName}} </td>
+          <td> {{user.mail}} </td>
           <td>
           </td>
         </tr>

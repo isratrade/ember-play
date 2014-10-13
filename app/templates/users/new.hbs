@@ -1,3 +1,7 @@
+{{#if showError}}
+    <div class="error">Leads must have a first and last name.</div>
+{{/if}}
+
 <form>
 
 <br />
@@ -28,5 +32,8 @@ Auth Source ID {{view Ember.TextField value=fields.auth_source_id}}
 {{#if controller.fields.isSaving}}
     <div class=saving> saving...</div>
 {{/if}}
+
+valid is {{valid}}
+
 </form>
 

@@ -3,11 +3,37 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   actions: {
     createUser: function() {
+
       var self = this;
-      var user = this.store.createRecord('user', this.get('fields'));
-      user.save().then(function() {
-        self.transitionToRoute('user', user);
-      });
+      var fields = this.get('fields')
+
+      // if (self.valid(fields)) {
+        var user = this.store.createRecord('user', fields)
+
+        user.save().then(function(user) {
+          self.transitionToRoute('user', user)
+        }, function(response) {
+          console.error("User not saved!");
+          this.set('showError', true);
+        });
+      // } else {
+      //   console.log('error got here');
+      //   this.set('showError', true)
+      // }
+
+
+      // post.save().then(function() {
+      //   console.log("Post saved.");
+      // }, function(response) {
+      //   console.error("Post not saved!");
+      // });
+
+    },
+
+    cancel: function() {
+      this.transitionToRoute('users');
     }
+
+
   }
 });

@@ -39,6 +39,9 @@ Router.map(function() {
     this.route('show', {path: '/:release_id'});
   });
   this.route('releases/show');
+
+  this.resource('users');
+
 });
 
 export default Router;

@@ -1,9 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
-  aaa: {
-    id: 10
-  }  //,
+  // puppetclasses: function() {
+  //    return ['a', 'b'];
+  // }.property();
+
+    //,
   // sub: function() {
   //   return this.get('subnet')
   // }

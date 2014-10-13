@@ -16,7 +16,7 @@ export default Ember.Route.extend({
 
   setupController: function(controller, model) {
     controller.set('model', model);
-    controller.set('puppetclasses', this.store.find('puppetclass'));
+    //controller.set('puppetclasses', this.store.find('puppetclass'));
   },
 
 });

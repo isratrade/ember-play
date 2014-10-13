@@ -12,5 +12,11 @@ export default Ember.Route.extend({
   deactivate:   function() {
     //this.controllerFor('hostgroup').set('showColumns', false)
     console.log('left hostgroup route');
-  }
+  },
+
+  setupController: function(controller, model) {
+    controller.set('model', model);
+    controller.set('puppetclasses', this.store.find('puppetclass'));
+  },
+
 });

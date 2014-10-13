@@ -42,9 +42,12 @@ Router.map(function() {
 
   this.resource('users');
   this.resource('users', { path: '/users' }, function() {
-    this.resource('user', { path: '/users/:id' });
+    this.resource('user', { path: 'users/:id' }, function() {
+      this.route('edit');
+    });
   });
 
+  this.route('user/edit');
 });
 
 export default Router;

@@ -1,5 +1,11 @@
 <h2>{{model.fullName}}</h2>
 
+
+{{#unless isEditing}}
+
+{{link-to 'EDIT THIS USER' 'user.edit' model classNames='edit'}}
+
+
 <br />
 {{model.login}}
 <br />
@@ -12,21 +18,8 @@
 {{model.lastLoginOn}}
 
 
-<br />
-firstname {{view Ember.TextArea value=model.firstname}}
+<hr />
+{{/unless}}
 
-<br />
-lastname {{view Ember.TextArea value=model.lastname}}
 
-<br />
-login {{view Ember.TextField value=model.login}}
-
-<br />
-<br />
-<button {{action 'saveChanges'}}>Save Changes</button>
-{{#if controller.showUnsavedMessage}}
-     <div class=unsaved> unsaved changes</div>
-{{/if}}
-{{#if controller.model.isSaving}}
-    <div class=saving> saving...</div>
-{{/if}}
+{{outlet}}

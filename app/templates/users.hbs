@@ -11,7 +11,7 @@
       </tr>
       {{#each user in controller}}
         <tr>
-          <td> {{user.login}} </td>
+          <td> {{#link-to 'user' user}} {{user.login}} {{/link-to}} </td>
           <td> {{user.fullName}} </td>
           <td>
           </td>

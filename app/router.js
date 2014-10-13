@@ -41,6 +41,9 @@ Router.map(function() {
   this.route('releases/show');
 
   this.resource('users');
+  this.resource('users', { path: '/users' }, function() {
+    this.resource('user', { path: '/users/:id' });
+  });
 
 });
 

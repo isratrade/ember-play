@@ -40,14 +40,15 @@ Router.map(function() {
   });
   this.route('releases/show');
 
-  this.resource('users');
   this.resource('users', { path: '/users' }, function() {
+    this.route('new');
     this.resource('user', { path: 'users/:id' }, function() {
       this.route('edit');
     });
   });
 
   this.route('user/edit');
+  this.route('users/new');
 });
 
 export default Router;

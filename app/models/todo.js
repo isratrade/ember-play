@@ -23,6 +23,6 @@ Todo.reopenClass({
             isCompleted: false
         }
     ]
-})
+});
 
 export default Todo;

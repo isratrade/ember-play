@@ -11,11 +11,13 @@ export default Ember.Route.extend({
     controller.set('hidetable', 'abc');
     //this.controllerFor('subnet').set('hidetable', 'xyzzzzz');
   },
-  activate:   function() {
+
+  activate: function() {
     //this.controllerFor('hostgroup').set('showColumns', false)
     console.log('ENTERING SUBNETS INDEX route');
   },
-  deactivate:   function() {
+
+  deactivate: function() {
     //this.controllerFor('hostgroup').set('showColumns', false)
     console.log('EXITING SUBNETS INDEX route');
   },

@@ -7,6 +7,6 @@ export default Ember.ArrayController.extend({
   }.property(),
   hidetable: 'defaultmeaningless',
   isBbb: function () {
-    return (this.get('hidetale') == 'bbb')
+    return (this.get('hidetale') === 'bbb');
   }.property('hidetable')
 });

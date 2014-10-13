@@ -18,7 +18,7 @@ export default Ember.Route.extend({
   },
 
   deactivate:   function() {
-    this.controllerFor('subnet').set('hidetable', 'fffff')
+    this.controllerFor('subnet').set('hidetable', 'fffff');
     console.log('EXISTING SUBNET SINGLE route');
   },
 

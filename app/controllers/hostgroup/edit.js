@@ -13,7 +13,13 @@ export default Ember.Controller.extend({
           alert(response);
         });
 //    }
-    }
+    },
+
+    cancel: function() {
+      this.get('model').rollback();
+      this.transitionToRoute('hostgroup');
+    },
+
   }
 
 });

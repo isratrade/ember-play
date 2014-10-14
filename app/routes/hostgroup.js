@@ -16,7 +16,8 @@ export default Ember.Route.extend({
 
   setupController: function(controller, model) {
     controller.set('model', model);
-    //controller.set('puppetclasses', this.store.find('puppetclass'));
+    // TODO - how to make parent_id dynamic
+    controller.set('parent_hostgroup', this.store.find('hostgroup', 1));
   },
 
 });

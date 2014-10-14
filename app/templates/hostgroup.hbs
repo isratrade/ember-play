@@ -8,7 +8,7 @@
   <div class='col-md-6'>
     Name: {{name}}
     <br />
-    Parent: {{parent}}
+    Parent: {{#link-to 'hostgroup' parent_hostgroup}} {{parent_hostgroup.name}} {{/link-to}}
     <br />
     Subnet: {{#link-to 'subnet' model.subnet}} {{subnet.name}} {{/link-to}}
     <br />
@@ -16,9 +16,18 @@
     <hr />
 
     <h2>Puppetclasses</h2>
-    {{#each puppetclass in puppetclasses}}
+    {{#each puppetclass in model.puppetclasses}}
       {{puppetclass.name}}<br />
     {{/each}}
+
+    <h2>Parameters</h2>
+
+
+    <h2>Locations</h2>
+
+
+    <h2>Organizations</h2>
+
   </div>
 {{/unless}}
 

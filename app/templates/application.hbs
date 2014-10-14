@@ -115,7 +115,7 @@
  <li class="dropdown menu_tab_dropdown">
   <a href="#" class="dropdown-toggle" data-id="aid_not_defined" data-toggle="dropdown" id="configure_menu">Configure<span class="caret"></span></a>
   <ul class="dropdown-menu">
-          <li class="menu_tab_hostgroups_index"><a href="/hostgroups" data-id="aid_hostgroups" id="menu_item_hostgroups">Host groups</a></li>
+          <li class="menu_tab_hostgroups_index">{{#link-to 'hostgroups' }}Host groups{{/link-to}}</li>
           <li class="menu_tab_common_parameters_index"><a href="/common_parameters" data-id="aid_common_parameters" id="menu_item_common_parameters">Global parameters</a></li>
         <li class="divider"></li>
         <li class="nav-header">Puppet</li>
@@ -131,8 +131,8 @@
           <li class="menu_tab_smart_proxies_index"><a href="/smart_proxies" data-id="aid_smart_proxies" id="menu_item_smart_proxies">Smart proxies</a></li>
           <li class="menu_tab_compute_resources_index"><a href="/compute_resources" data-id="aid_compute_resources" id="menu_item_compute_resources">Compute resources</a></li>
           <li class="menu_tab_compute_profiles_index"><a href="/compute_profiles" data-id="aid_compute_profiles" id="menu_item_compute_profiles">Compute profiles</a></li>
-          <li class="menu_tab_subnets_index"><a href="/subnets" data-id="aid_subnets" id="menu_item_subnets">Subnets</a></li>
-          <li class="menu_tab_domains_index"><a href="/domains" data-id="aid_domains" id="menu_item_domains">Domains</a></li>
+          <li class="menu_tab_subnets_index">{{#link-to 'subnets' }}Subnets{{/link-to}}</li>
+          <li class="menu_tab_subnets_index">{{#link-to 'domains' }}Domains{{/link-to}}</li>
           <li class="menu_tab_realms_index"><a href="/realms" data-id="aid_realms" id="menu_item_realms">Realms</a></li>
   </ul>
 </li>

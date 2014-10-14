@@ -1,10 +1,39 @@
-<nav class='navbar navbar-default" role='navigation'>
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href>RHCI</a>
-    </div>
+<div class="navbar navbar-default navbar-outer">
+  <div class="navbar-header">
+    <div class="container">
 
-    <ul class="nav navbar-nav">
+      <div class="navbar-brand">
+        <!--[if IE]><div class='logo-small'> <![endif]-->
+        <img alt="Foreman" src="http://localhost:3002/assets/foreman.png" />
+        <!--[if IE]></div> <![endif]-->
+        <a href="/" data-id="aid_not_defined">Foreman</a>
+      </div>
+
+      <div>
+        <ul class="nav navbar-nav navbar-right navbar-header-menu navbar-collapse collapse" id="menu4">
+          <li class="dropdown menu_tab_dropdown">
+            <a href="#" class="dropdown-toggle" data-id="aid_not_defined" data-toggle="dropdown" id="account_menu"><img alt="Change your avatar at gravatar.com" class="avatar small" onerror="this.src=&#x27;/assets/user.jpg&#x27;" src="http://secure.gravatar.com/avatar/2e3458169ec423666270dfe6ae600742?d=mm&amp;s=30" />Foreman Admin <span class="caret"></span></a>
+
+            <ul class="dropdown-menu pull-right">
+              <li class="menu_tab_/users_edit"><a href="/users/1/edit" data-id="aid_users_1_edit" id="menu_item_my_account">My account</a></li>
+              <li class="divider"></li>
+              <li class="menu_tab_/users_logout"><a href="/users/logout" data-id="aid_users_logout" data-method="post" id="menu_item_logout" rel="nofollow">Log out</a></li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
       <li>{{#link-to "hostgroups"}} Hostgroups {{/link-to}} </li>
       <li>{{#link-to "subnets"}} Subnets {{/link-to}} </li>
       <li>{{#link-to "domains"}} Domains {{/link-to}} </li>
@@ -15,10 +44,6 @@
         <li>{{#link-to "subreddit" this}} {{this}} {{/link-to}} </li>
       {{/each}}
 
-    </ul>
-
-  </div>
-</nav>
 
 <hr />
 

@@ -1,7 +1,8 @@
-    Name {{view Ember.TextField value=content.name}}
+Name {{view Ember.TextField value=content.name class="form-control"}}
 
-    <br />
-    <p>Subnet:
+<br />
+
+Subnet
       {{view Ember.Select
            content=subnets
            optionLabelPath="content.name"
@@ -9,9 +10,12 @@
            selection=content.subnet
            value=content.ubnet.id
            prompt="Select Subnet"
+           class="form-control"
       }}
-    </p>
-    <p>Domain:
+
+<br />
+
+Domain
       {{view Ember.Select
            content=domains
            optionLabelPath="content.name"
@@ -19,9 +23,14 @@
            selection=content.domain
            value=content.domain.id
            prompt="Select Domain"
+           class="form-control"
       }}
-    </p>
 
-
-<button {{action 'update'}}>Save Changes</button>
-<button {{action 'cancel'}}>Cancel</button>
+<br />
+<br />
+<br />
+<br />
+<button {{action 'cancel'}} class='btn btn-default'>Cancel</button>
+<button {{action 'update'}} class='btn btn-primary'>Submit</button>
+<br />
+<br />

@@ -1,24 +1,26 @@
-<h2>Hostgroup</h2>
-{{link-to 'EDIT' 'hostgroup.edit' model}}
+<br />
+<h1>{{title}} {{link-to 'Edit' 'hostgroup.edit' model class='btn btn-default'}}</h1>
+
 
 <div class='row'>
 
+{{#unless isEditing}}
   <div class='col-md-6'>
     Name: {{name}}
     <br />
-    Subnet: {{subnet.name}}
+    Parent: {{parent}}
     <br />
-    Domain: {{domain.name}}
-
+    Subnet: {{#link-to 'subnet' model.subnet}} {{subnet.name}} {{/link-to}}
+    <br />
+    Domain: {{#link-to 'domains'}} {{domain.name}} {{/link-to}}
     <hr />
 
     <h2>Puppetclasses</h2>
     {{#each puppetclass in puppetclasses}}
       {{puppetclass.name}}<br />
     {{/each}}
-
-
   </div>
+{{/unless}}
 
   <div class='col-md-6'>
     {{outlet}}

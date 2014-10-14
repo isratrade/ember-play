@@ -1,27 +1,112 @@
-<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Rhci</title>
+    <title>RHCI</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
 
     {{content-for 'head'}}
 
-    <link rel="stylesheet" href="assets/vendor.css">
+<!--     <link rel="stylesheet" href="assets/vendor.css">
     <link rel="stylesheet" href="assets/rhci.css">
+ -->
+    <link href="http://localhost:3002/assets/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
 
+    <link href="http://localhost:3002/assets/jquery.ui.core.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+    <link href="http://localhost:3002/assets/jquery.ui.theme.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+    <link href="http://localhost:3002/assets/jquery.ui.menu.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+    <link href="http://localhost:3002/assets/jquery.ui.autocomplete.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+    <link href="http://localhost:3002/assets/jquery.jnotify.css?body=1" media="screen" rel="stylesheet" type="text/css" />
     <link href="http://localhost:3002/assets/multi-select.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+    <link href="http://localhost:3002/assets/vendor.css?body=1" media="screen" rel="stylesheet" type="text/css" />
     <link href="http://localhost:3002/assets/scoped_search.css?body=1" media="screen" rel="stylesheet" type="text/css" />
     <link href="http://localhost:3002/assets/application.css?body=1" media="screen" rel="stylesheet" type="text/css" />
     <link href="http://localhost:3002/assets/bootstrap_and_overrides.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+    <link href="http://localhost:3002/assets/charts.css?body=1" media="screen" rel="stylesheet" type="text/css" />
     <link href="http://localhost:3002/assets/colors.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+    <link href="http://localhost:3002/assets/jquery.gridster.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+    <link href="http://localhost:3002/assets/gridster.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+    <link href="http://localhost:3002/assets/dashboard.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+    <link href="http://localhost:3002/assets/login.css?body=1" media="screen" rel="stylesheet" type="text/css" />
     <link href="http://localhost:3002/assets/mixin.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+    <link href="http://localhost:3002/assets/password_strength.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+    <link href="http://localhost:3002/assets/topbar.css?body=1" media="screen" rel="stylesheet" type="text/css" />
     <link href="http://localhost:3002/assets/two_pane.css?body=1" media="screen" rel="stylesheet" type="text/css" />
     <link href="http://localhost:3002/assets/typography.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+    <link href="http://localhost:3002/assets/wizard.css?body=1" media="screen" rel="stylesheet" type="text/css" />
 
-  </head>
+
+    <meta content="authenticity_token" name="csrf-param" />
+    <meta content="FMKJs3OT0RIgaIhcHGaM1rP61+Jz9ukpjyi3QEPUoDQ=" name="csrf-token" />
+    <script src="http://localhost:3002/assets/jquery.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/locale/de/app.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/locale/en/app.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/locale/en_GB/app.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/locale/es/app.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/locale/fr/app.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/locale/gl/app.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/locale/ja/app.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/locale/pt_BR/app.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/locale/sv_SE/app.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/locale/zh_CN/app.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/gettext/jed.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/gettext/all.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/i18n.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/jquery_ujs.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/jquery.ui.core.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/jquery.ui.widget.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/jquery.ui.position.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/jquery.ui.menu.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/jquery.ui.autocomplete.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/scoped_search.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/bootstrap/affix.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/bootstrap/alert.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/bootstrap/button.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/bootstrap/carousel.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/bootstrap/collapse.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/bootstrap/dropdown.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/bootstrap/tab.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/bootstrap/transition.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/bootstrap/scrollspy.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/bootstrap/modal.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/bootstrap/tooltip.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/bootstrap/popover.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/bootstrap.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/multi-select.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/charts.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/topbar.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/two-pane.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/diff.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/excanvas.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/jquery.flot.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/jquery.flot.time.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/jquery.flot.pie.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/jquery.flot.stack.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/jquery.flot.selection.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/flot.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/jquery.cookie.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/jquery.dataTables.min.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/jquery.dataTables.bootstrap-paging.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/jquery.jnotify.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/jquery.jeditable.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/vendor.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/about.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/jquery.extentions.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/jquery.multi-select.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/settings.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/jquery.gridster.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/hidden_values.js?body=1" type="text/javascript"></script>
+    <script src="http://localhost:3002/assets/application.js?body=1" type="text/javascript"></script>
+
+
+    <script type="text/javascript">
+      var URL_PREFIX = '';
+      var AUTH_TOKEN = '&quot;FMKJs3OT0RIgaIhcHGaM1rP61+Jz9ukpjyi3QEPUoDQ=&quot;';
+    </script>
+
+   </head>
+
   <body>
     <script src="assets/vendor.js"></script>
     <script src="assets/rhci.js"></script>

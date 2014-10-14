@@ -6,5 +6,6 @@ export default DS.Model.extend({
   parent_id: DS.attr('number'),
   subnet: DS.belongsTo('subnet'),
   domain: DS.belongsTo('domain'),
-  puppetclasses: DS.hasMany('puppetclass', {async: true})
+  puppetclasses: DS.hasMany('puppetclass', {async: true}),
+  config_groups: DS.hasMany('configGroup', {async: true})
 });

@@ -16,8 +16,18 @@
     <hr />
 
     <h2>Puppetclasses</h2>
+    <h4>Config groups</h4>
+    {{#each config_group in model.config_groups}}
+      {{config_group.name}}<br />
+    {{else}}
+      No Config Groups
+    {{/each}}
+
+    <h4>Puppetclasses</h4>
     {{#each puppetclass in model.puppetclasses}}
       {{puppetclass.name}}<br />
+    {{else}}
+      No Puppet classes
     {{/each}}
 
     <h2>Parameters</h2>

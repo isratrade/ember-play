@@ -34,9 +34,19 @@
 
 
     <h2>Locations</h2>
+    {{#each location in model.locations}}
+      {{location.name}}<br />
+    {{else}}
+      No Locations
+    {{/each}}
 
 
     <h2>Organizations</h2>
+    {{#each organization in model.organizations}}
+      {{organization.name}}<br />
+    {{else}}
+      No Organizations
+    {{/each}}
 
   </div>
 {{/unless}}

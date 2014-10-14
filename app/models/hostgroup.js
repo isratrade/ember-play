@@ -7,5 +7,7 @@ export default DS.Model.extend({
   subnet: DS.belongsTo('subnet'),
   domain: DS.belongsTo('domain'),
   puppetclasses: DS.hasMany('puppetclass', {async: true}),
-  config_groups: DS.hasMany('configGroup', {async: true})
+  config_groups: DS.hasMany('configGroup', {async: true}),
+  locations: DS.hasMany('location', {async: true}),
+  organizations: DS.hasMany('organization', {async: true})
 });

@@ -21,7 +21,7 @@
         <th>Actions</th>
       </tr>
 
-      {{#each user in filteredUsers}}
+      {{#each user in controller.thisUsers}}
         <tr>
           <td> {{#link-to 'user' user}} {{user.login}} {{/link-to}} </td>
           <td> {{user.fullName}} </td>

@@ -20,6 +20,10 @@ export default Ember.ArrayController.extend({
     return this.get('search') ? this.get('searchedUsers') : this;
   }.property('search', 'searchedUsers'),
 
+  thisUsers: function() {
+    return this;
+  }.property(),
+
   cntFilteredUsers: function() {
       return this.get('filteredUsers').get('length');
   }.property('search', 'this.@each')
